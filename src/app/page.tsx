@@ -45,11 +45,11 @@ export default function Home() {
 
         {/* FIXED LOGO */}
         <Image
-          src="/logo.png"
+          src="/logo5.png"
           width={40}
           height={40}
           priority
-          alt="logo"
+          alt="logo5"
           className="cursor-pointer opacity-80 hover:opacity-50 transition"
         />
       </header>
