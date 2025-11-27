@@ -5,11 +5,15 @@ import Image from "next/image";
 import { Link } from "react-scroll";
 import { motion } from "framer-motion";
 
+// Tipo de dirección del carrusel
+type Direction = "next" | "prev";
+
 export default function Home() {
   const works = [
     {
       title: "Hidegori Toys",
-      description: "An e-commerce project using TypeScript, React and TailwindCSS.",
+      description:
+        "An e-commerce project using TypeScript, React and TailwindCSS.",
       images: ["/work11.jpg", "/work1bb.jpg"],
     },
     {
@@ -30,10 +34,12 @@ export default function Home() {
     },
   ];
 
-  // individual index for each work
-  const [indices, setIndices] = useState(Array(works.length).fill(0));
+  // índice propio para cada work card
+  const [indices, setIndices] = useState<number[]>(
+    Array(works.length).fill(0)
+  );
 
-  const changeImage = (workIndex, direction) => {
+  const changeImage = (workIndex: number, direction: Direction) => {
     setIndices((prev) => {
       const updated = [...prev];
       const imgCount = works[workIndex].images.length;
@@ -58,7 +64,7 @@ export default function Home() {
         style={{ backgroundImage: "url('/background.jpg')" }}
       />
 
-      {/* GLASS OVERLAY */}
+      {/* OVERLAY */}
       <div className="fixed inset-0 bg-white/25 dark:bg-black/45 backdrop-blur-sm -z-10" />
 
       {/* HEADER */}
@@ -128,7 +134,7 @@ export default function Home() {
                 <p className="text-sm max-w-md mt-4 text-center">{work.description}</p>
               </div>
 
-              {/* Buttons now only affect single card */}
+              {/* Buttons solo afectan esta card */}
               <button
                 className="absolute left-6 top-1/2 -translate-y-1/2 text-white text-4xl opacity-50 hover:opacity-100 transition"
                 onClick={() => changeImage(i, "prev")}
