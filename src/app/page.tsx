@@ -7,14 +7,14 @@ import { motion } from "framer-motion";
 
 export default function Home() {
   const works = [
-    { title: "Project One", description: "Interfaz limpia enfocada en experiencia y accesibilidad.", images: ["/work1.jpg", "/work1b.jpg"] },
-    { title: "Project Two", description: "Sistema visual minimalista con enfoque editorial.", images: ["/work2.jpg", "/work2b.jpg"] },
-    { title: "Project Three", description: "E-commerce refinado con interacción fluida.", images: ["/work3.jpg", "/work3b.jpg"] },
-    { title: "Project Four", description: "Exploración visual experimental enfocada en ritmo y silencio.", images: ["/work4.jpg", "/work4b.jpg"] },
+    { title: "Hidegori Toys", description: "An e-commerce project am being part and working at right now :D Typescript, React, TailwindCSS...", images: ["/work10.jpg", "/work1b.jpg"] },
+    { title: "Sunny Notes", description: "Diary and private notes app I've made with kotlin for android.", images: ["/work2.jpg", "/work2b.jpg"] },
+    { title: "Hero Sheet", description: "Role cards simulator/ game I've done as a project", images: ["/work3.jpg", "/work3b.jpg"] },
+    { title: "Generative AI Platform for Creatives", description: "ExpNext.js application for providing creatives the ability to enhance their work with Generative AI workflows.", images: ["/work4.jpg", "/work4b.jpg"] },
   ];
 
   const education = [
-    { img: "/edu1.jpg", text: "Certificado • UI / Branding" },
+    { img: "/edu1.jpg", text: "Systems Analyst • Instituto Superior de Informatica Virasoro" },
     { img: "/edu2.jpg", text: "Certificado • React / Next.js" },
     { img: "/edu3.jpg", text: "Certificado • UX Research" },
   ];
@@ -93,8 +93,8 @@ export default function Home() {
             >
               <Image
                 src={work.images[imageIndex]}
-                width={1600}
-                height={900}
+                width={1300}
+                height={700}
                 alt={work.title}
                 className="object-cover w-full h-[380px] md:h-[430px] group-hover:brightness-[55%] transition duration-500"
               />
